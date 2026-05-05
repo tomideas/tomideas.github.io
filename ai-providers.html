@@ -71,10 +71,15 @@
   <li><strong>NVIDIA NIM</strong>：<code>integrate.api.nvidia.com/v1</code></li>
 </ul>
 
-<h3>本地供應商</h3>
+<h3>本地模型供應商</h3>
 <ul>
   <li><strong>Ollama</strong>：<code>localhost:11434/v1</code> — 免費本地模型。</li>
   <li><strong>LM Studio</strong>：<code>localhost:1234/v1</code> — 圖形化介面管理本地模型。</li>
+</ul>
+
+<h3>獨立 Agent / Gateway 供應商</h3>
+<ul>
+  <li><strong>Hermes (Beta)</strong>：<code>127.0.0.1:8642/v1</code> — 本地 Agent API Server（OpenAI 相容）；預設模型為 <code>hermes-agent</code>。</li>
   <li><strong>OpenClaw (Beta)</strong>：<code>ws://127.0.0.1:18789</code> — WebSocket 協定。</li>
 </ul>
 
@@ -94,7 +99,7 @@
     <tr><td>NVIDIA</td><td><a href="https://build.nvidia.com/" target="_blank">build.nvidia.com</a></td></tr>
   </tbody>
 </table>
-<p>本地供應商（Ollama、LM Studio、OpenClaw）不需要 API 金鑰。</p>
+<p>本地模型供應商（Ollama、LM Studio）通常不需要 API 金鑰。獨立 Agent / Gateway 供應商中，Hermes 通常需要填入 <code>API_SERVER_KEY</code>；OpenClaw 走 WebSocket 連線流程。</p>
 
 <h2>設定供應商</h2>
 <ol>
